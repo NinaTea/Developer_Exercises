@@ -35,8 +35,8 @@ class Circulo:
             self._r = radio
             
     def __repr__(self):
-        x = self.r*np.cos(self.theta)
-        y = self.r*np.sin(self.theta)
+        x = self._r*np.cos(self.theta)
+        y = self._r*np.sin(self.theta)
         
         fig, ax = plt.subplots()
         plt.title("Objeto círculo")
@@ -51,15 +51,15 @@ class Circulo:
         
          
     def area(self):
-        return round(self.r*self.r*self.pi)
+        return round(self._r*self._r*self.pi)
     
     def perimetro(self):
-        return round(2*self.r*self.pi)
+        return round(2*self._r*self.pi)
     
 
 def multiplicar_Circulo(clase, n):
     if n > 0:
-        radio = clase.r*n
+        radio = clase._r*n
         circuloNuevo = Circulo(radio)
     else:
         raise Exception("Por definición, los círculos tienen radio mayor a cero. Intentá de vuelta. ") 
