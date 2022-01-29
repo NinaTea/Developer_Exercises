@@ -26,13 +26,13 @@ class Circulo:
             raise Exception("Por definición, los círculos tienen radio mayor a cero. Intentá de vuelta. ")   
             
         else: 
-            self.setRadio(radio)
+            self._r = radio
 
-    def setRadio(self, radio):
+    def cambiarRadio(self, radio):
         if radio < 0:
             raise Exception("Los números permitidos son los positivos. ")
         else: 
-            self.r = radio
+            self._r = radio
             
     def __repr__(self):
         x = self.r*np.cos(self.theta)
