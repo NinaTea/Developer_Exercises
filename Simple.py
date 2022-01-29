@@ -23,7 +23,7 @@ def orden_mayor_a_menor(listaAOrdenar):
     ordenado = []
     
     for diccionario in listaAOrdenar:
-        edades.append(diccionario["edad"]) #edad en una lista de tuplas
+        edades.append(diccionario["edad"]) #Guardo las edades en una lista 
     
     for i in range(len(edades)): #ordeno las edades de mayor a menor
         for j in range(len(edades)):
@@ -33,11 +33,14 @@ def orden_mayor_a_menor(listaAOrdenar):
                 edades[j] = n
                 
 
-    for i in range(len(edades)): 
+    for i in range(len(edades)): #Busco el diccionario que cumple con la mayor edad
         for j in range(len(edades)):
             if edades[i] == listaAOrdenar[j]["edad"]:
                 ordenado.append(listaAOrdenar[j])
-                
+    
+    print("El id de la persona más jóven es: " + str(ordenado[9]["id"]) + "\n"+
+          "El id de la persona más mayor es: " + str(ordenado[0]["id"]))
+    
     return ordenado
     
 
