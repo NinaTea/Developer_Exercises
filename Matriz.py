@@ -12,6 +12,9 @@ h = []
 i = 0
 j = 1
 while True:
+    #Sólo se fija en los primeros dos elementos porque debido al tamaño de la matriz
+    #la secuencia, de izquierda a derecha, de números sólo puede empezar
+    #en los primeros dos elementos
     if matriz[i][j-1] < matriz[i][j] < matriz[i][j+1] < matriz[i][j+2] :
         h.append((i,j-1))
         h.append((i,j+2))
@@ -27,6 +30,7 @@ a = 1
 b = 0
 v = []
 while True:
+    #Mismo razomiento que en la secuencia horizontal
     if matriz[a-1][b] < matriz[a][b] < matriz[a+1][b] < matriz[a+2][b] :
         v.append((a-1,b))
         v.append((a+2,b))
