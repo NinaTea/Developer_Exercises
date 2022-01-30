@@ -2,12 +2,6 @@
 """
 @author: Camila Gallo García
 """
-
-# Hacer una función que genere una lista de diccionarios que contengan id y edad, donde
-# edad sea un número aleatorio entre 1 y 100 y la longitud de la lista sea de 10
-# elementos. retornar la lista.
-# Hacer otra función que reciba lo generado en la primer función y ordenarlo de mayor a
-# menor. Printear el id de la persona más joven y más vieja. Devolver la lista ordenada.
 from numpy import random
 
 def lista_diccionarios():
@@ -19,6 +13,17 @@ def lista_diccionarios():
     return lista
 
 def orden_mayor_a_menor(listaAOrdenar):
+    
+    """
+    Dada una lista de diccionarios, la función debe devolver 
+    la lista ordenada e imprimir en patalla el id de la persona más joven y más grande. 
+    
+    >>> orden_mayor_a_menor([{'id': 0, 'edad': 41},{'id': 1, 'edad': 44},{'id': 2, 'edad': 21},{'id': 3, 'edad': 4},{'id': 4, 'edad': 61},{'id': 5, 'edad': 14},{'id': 6, 'edad': 96},{'id': 7, 'edad': 92},{'id': 8, 'edad': 3},{'id': 9, 'edad': 67}])
+    El id de la persona más jóven es: 8
+    El id de la persona más mayor es: 6
+    [{'id': 6, 'edad': 96}, {'id': 7, 'edad': 92}, {'id': 9, 'edad': 67}, {'id': 4, 'edad': 61}, {'id': 1, 'edad': 44}, {'id': 0, 'edad': 41}, {'id': 2, 'edad': 21}, {'id': 5, 'edad': 14}, {'id': 3, 'edad': 4}, {'id': 8, 'edad': 3}]
+    """
+    
     edades =  []
     ordenado = []
     
@@ -43,7 +48,10 @@ def orden_mayor_a_menor(listaAOrdenar):
     
     return ordenado
     
-
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod()
+    
     
     
     
