@@ -2,10 +2,6 @@
 """
 @author: Camila Gallo García
 """
-
-# Permitir la multiplicación del circulo: Circulo * n debe devolver un nuevo objeto con el radio
-# multiplicado por n. No permitir la multiplicación por números <= 0
-
 import unittest
 import Clases
 class test_Clases(unittest.TestCase):
